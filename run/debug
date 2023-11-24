@@ -1,0 +1,9 @@
+mkdir -p ./sim/fp32_multi_debug
+cd ./sim/fp32_multi_debug
+../simv +debug +X1=$1 +X2=$2
+
+read -p "open verdi? [y/n]" debug
+
+if [ $debug == 'y' ];then
+	verdi -sx -f "$PROJECT_DIR/testbench/tb.f" -ssf ./waveform.fsdb
+fi

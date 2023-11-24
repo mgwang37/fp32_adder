@@ -1,0 +1,3 @@
+mkdir -p ./sim/fp32_adder_smoke
+cd ./sim/fp32_adder_smoke
+../simv +smoke
